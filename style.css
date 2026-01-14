@@ -1,84 +1,28 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* Lightbox feature */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
-#wrapper{
-    height:100vh;
-    overflow-x:hidden;
-    overflow-y: auto;
-}
-.container{
-height:100%;
-max-width:1200px;
-/* if we will keep width then also kaam chal jayega but max width we kept because till 1200px it will extend but after that it will overflow */
-margin:0 auto;
-/* margin used to place content at centree of 1200px */
-padding:20px;
-/* border and content ke bich ke space ko padding kehte h */
-    text-align:center;
-}
-.conatiner h1{
-    margin:100 0; 
-   /* top and right margin values */
-    margin-bottom:20px;
-    font-size:3rem;
-    
-}
-.gallery{
-    display:flex;
-  flex-wrap: wrap;
-    justify-content:space-between;
-}
-.card{
-    width:32%; 
-    /* 96 % for box and 4% for spacing */
-    position:relative;
-     margin-bottom:20px;
-     border-radius:10px;
-     overflow:hidden;
-}
-.card img{
-    width:100%;
-    /* jo  parent element ki width thi vo same width iski hojayegi*/
-
- 
- filter:grayscale(100%); 
-  box-shadow:0 0 20px #333;
-  transition: transform 0.3s ease;
-  height:100%; 
-  /* image wala hide hogya */
- object-fit: cover;
-}
-.card:hover{
-    transform:scale(1.03);
-    transition:0.5s;
-     filter:drop-shadow(0 0 10px #333); 
-    /* box-shadow:0 0 10px #333 not that good with box shadow */
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
 }
 
- .card:hover img{
-   filter: grayscale(0%);
- } 
- .card figcaption{
-    position:absolute;
-    bottom:0;
-    left:0;
-    padding:25px;
-    width:100%;
-    height:20%;
-    font-size:16px;
-    font-weight:500;
-    color:#fff;
-    opacity:0;
-    border-radius:0 0 10px 10px;
-    background:linear-gradient(0deg, rgba(0,0,0,0.5) 0%,rgba(255,255,255,0) 100%) ;
-    transition:0.3s;
-
- }
-.card:hover figcaption{
-   opacity:1;
-   transform:scale(1.03);
-
+#close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
 }
