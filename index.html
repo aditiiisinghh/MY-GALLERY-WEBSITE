@@ -3,67 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Gallery </title>
-<link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+    <title>My Gallery</title>
+
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="wrapper">
 
-<div class="container">
-<h1 >MY GALLERY</h1>
-<div class="gallery">
+<div id="wrapper">
+    <div class="container">
+        <h1>MY GALLERY</h1>
 
+        <div class="gallery">
 
-<figure class="card ">
-     <img src="image1.jpg" alt="">
-     <figcaption>
-        Image1
-     </figcaption>
-</figure>
+            <figure class="card">
+                <img src="image1.jpg" alt="Image1">
+                <figcaption>Image1</figcaption>
+            </figure>
 
-<figure class="card ">
-     <img src="image2.jpg" alt="">
-     <figcaption>
-        Image2
-     </figcaption>
-</figure>
+            <figure class="card">
+                <img src="image2.jpg" alt="Image2">
+                <figcaption>Image2</figcaption>
+            </figure>
 
-     <figure class="card ">
-     <img src="image3.jpg" alt="">
-     <figcaption>
-        Image3
-     </figcaption>
-     </figure>
+            <figure class="card">
+                <img src="image3.jpg" alt="Image3">
+                <figcaption>Image3</figcaption>
+            </figure>
 
+            <figure class="card">
+                <img src="image4.jpg" alt="Image4">
+                <figcaption>Image4</figcaption>
+            </figure>
 
-     <figure class="card ">
-     <img src="image4.jpg" alt="">
-     <figcaption>
-        Image4
-     </figcaption>
-     </figure>
+            <figure class="card">
+                <img src="image5.jpg" alt="Image5">
+                <figcaption>Image5</figcaption>
+            </figure>
 
+            <figure class="card">
+                <img src="image6.jpg" alt="Image6">
+                <figcaption>Image6</figcaption>
+            </figure>
 
-     <figure class="card ">
-     <img src="image5.jpg" alt="">
-     <figcaption>
-        Image5
-     </figcaption>
-     </figure>
-
-
-     <figure class="card ">
-     <img src="image6.jpg" alt="">
-     <figcaption>
-        Image6
-     </figcaption>
-     
-</figure>
- 
+        </div>
+    </div>
 </div>
+
+<!-- 🔹 Lightbox Feature -->
+<div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img">
 </div>
- </div>
-     
+
+<script>
+    const images = document.querySelectorAll(".card img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.getElementById("close");
+
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+</script>
+
 </body>
 </html>
