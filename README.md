@@ -2,7 +2,7 @@
 
 ## Overview
 This is a simple and responsive image gallery website built using **HTML** and **CSS**.  
-The project displays a collection of images in a clean layout and was created to practice basic frontend development concepts like layout design, styling, and responsiveness.
+The project displays a collection of images in a clean layout and was created to practice basic frontend development concepts like layout design, styling, and responsive.
 
 ---
 
