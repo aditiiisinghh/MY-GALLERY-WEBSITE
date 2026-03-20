@@ -61,4 +61,5 @@ This project was created as a **practice project** to strengthen my understandin
 ## Future Improvements
 - Add hover effects or animations
 - Improve mobile responsiveness
-- Add JavaScript for dynamic image loading or modal view
+- Add JavaScript for dynamic image loading or modal view.
+
